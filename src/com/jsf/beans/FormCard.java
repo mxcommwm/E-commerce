@@ -7,6 +7,7 @@ import javax.faces.bean.RequestScoped;
 @RequestScoped
 
 public class FormCard {
+	
 	private String token;
 	private String titularCard;
 	private String numberCard;
