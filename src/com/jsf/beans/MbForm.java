@@ -6,6 +6,7 @@ import javax.faces.bean.RequestScoped;
 @ManagedBean
 @RequestScoped
 public class MbForm {
+	private String cambio;
 	private String User="coco_dava@gmail.com";
 	private String Password;
 	
