@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<h:head>
+
+    <meta charset="utf-8"/>
+    <meta name="robots" content="all,follow"/>
+    <meta name="googlebot" content="index,follow,snippet,archive"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Obaju e-commerce template"/>
+    <meta name="author" content="Ondrej Svestka | ondrejsvestka.cz"/>
+    <meta name="keywords" content=""/>
+
+    <title>MWM E-commerce</title>
+
+    <meta name="keywords" content=""/>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'/>
+
+    <!-- Estilos -->
+    
+    <h:outputStylesheet library="css" name="bootstrap.min.css" />
+    <h:outputStylesheet library="css" name="font-awesome.css" />
+    <h:outputStylesheet library="css" name="animate.min.css" />
+    <h:outputStylesheet library="css" name="owl.carousel.css" />
+    <h:outputStylesheet library="css" name="owl.theme.css" />   
+
+    <!-- CHECAR ESTA PARTE -->
+    <h:outputStylesheet library="css" name="style.default.css" id="theme-stylesheet"/>  
+
+    <!-- your stylesheet with modifications -->
+    <h:outputStylesheet library="css" name="custom.css" />
+    <h:outputScript library="js" name="respond.min.js" />
+
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
+		
+
+
+
+</h:head>
+
+<h:body>
+
+    <!-- *** TOPBAR ***
+ _________________________________________________________ -->
+    <div id="top">
+        <div class="container">
+            <div class="col-md-12" data-animate="fadeInDown">
+                <ul class="menu">
+                    <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+                    </li>
+                    <li><a href="register.xhtml">Regístrate</a>
+                    </li>
+                    <li><a href="contact.xhtml">Contacto</a>
+                    </li>
+                    <li><a href="#">Visto recientemente</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title" id="Login">Inicie sesión</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h:form action="customer-orders.xhtml" method="post">
+                            <div class="form-group">
+                                <h:inputText  class="form-control" id="email-modal" placeholder="email" value="#{mbForm.user}"/>
+                                <h:message for="username"></h:message>
+                            </div>
+                            <div class="form-group">                            
+                            <input type="password" class="form-control" id="password-modal" placeholder="Contraseña"/>
+                            </div>
+
+                            <p class="text-center">
+                                <button class="btn btn-primary"><i class="fa fa-sign-in"></i>Iniciar sesion</button>
+                            </p>
+
+                        </h:form>
+
+                        <p class="text-center text-muted">¿No te has registrado?</p>
+                        <p class="text-center text-muted"><a href="register.xhtml">¡<strong>Regístrate ahora</strong></a>! ¡Es fácil y listo en 1 minuto y le da acceso a descuentos especiales y mucho más!</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- *** TOP BAR END *** -->
+
+    <!-- *** NAVBAR ***
+    _____________________________ -->
+
+   <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+
+                <a class="navbar-brand home" href="index.xhtml" data-animate-hover="bounce">
+                <h:graphicImage value="/resources/img/logo.png" alt="Obaju logo" class="hidden-xs img" id="img"/>
+                <h:graphicImage value="/resources/img/logo-small.png" alt="Obaju logo" class="visible-xs" id="imagen"/><span class="sr-only">Obaju - go to homepage</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
+                        <span class="sr-only">Toggle search</span>
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <a class="btn btn-default navbar-toggle" href="basket.xhtml">
+                        <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 productos</span>
+                    </a>
+                </div>
+            </div>
+            <!--/.navbar-header -->
+
+            <div class="navbar-collapse collapse" id="navigation">
+
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="index.xhtml">Inicio</a>
+                    </li>
+                    <li class="dropdown yamm-fw">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Redes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h5>Inalámbrico</h5>
+                                            <ul>
+                                                <li><a href="category.xhtml">Switch</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Routers</a>
+                                                </li>
+                                                <li><a href="category.xhtml">tp-link</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Loco M2</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>Antenas</h5>
+                                            <ul>
+                                                <li><a href="category.xhtml">Mikrotik</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Cisco</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Nano Station</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Direccionales</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>Accessorios</h5>
+                                            <ul>
+                                                <li><a href="category.xhtml">Cable UTP</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Conectores</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Cable Fibra Óptica</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Aironet</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Acces Points</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Routers</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>Antenas</h5>
+                                            <ul>
+                                                <li><a href="category.xhtml">Omnidireccionales</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Bidireccionales</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Direccionales</a>
+                                                </li>
+                                            </ul>
+                                            <h5>Routers</h5>
+                                            <ul>
+                                                <li><a href="category.xhtml">Router1</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Router2</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Router3</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.yamm-content -->
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown yamm-fw">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">CCTV<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h5>Antenas</h5>
+                                            <ul>
+                                                <li><a href="category.xhtml">Antena1</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Antena2</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Antena3</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Antena4</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>Camaras</h5>
+                                            <ul>
+                                                <li><a href="category.xhtml">Cámara1</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Cámara2</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Cámara3</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Cámara4</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>CÁMARAS</h5>
+                                            <ul>
+                                               <li><a href="category.xhtml">Cámara1</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Cámara2</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Cámara3</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Cámara4</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Cámara5</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Cámara6</a>
+                                                </li>
+                                            </ul>
+                                            <h5>Otros</h5>
+                                            <ul>
+                                                <li><a href="category.xhtml">Otros1</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Otros2</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Otros3</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="banner">
+                                                <a href="#">
+                                                 <h:graphicImage value="/resources/img/banner.jpg" alt="" class="img-responsive"/>
+                                                </a>
+                                            </div>
+                                            <div class="banner">
+                                                <a href="#">
+                                                    <h:graphicImage value="/resources/img/banner2.jpg" alt="" class="img-responsive"/>                                                    
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.yamm-content -->
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown yamm-fw">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Directorio<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h5>E-commerce</h5>
+                                            <ul>
+                                               <li><a href="index.xhtml">Inicio</a>
+                                                </li>
+                                                <li><a href="category.xhtml">Categoria Redes</a>
+                                                </li>
+                                                <li><a href="category-right.xhtml">Categoria CCTV</a>
+                                                </li>
+                                                <li><a href="category-full.xhtml">Categoria Antenas</a>
+                                                </li>
+                                                <li><a href="detail.xhtml">Productos</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>User</h5>
+                                            <ul>
+                                                <li><a href="register.xhtml">Regístrate/Inicia sesión / login</a>
+                                                </li>
+                                                <li><a href="customer-orders.xhtml">Historial</a>
+                                                </li>
+                                                <li><a href="customer-order.xhtml">Detalles de historial</a>
+                                                </li>
+                                                <li><a href="customer-wishlist.xhtml">Mi lista de deseos</a>
+                                                </li>
+                                                <li><a href="customer-account.xhtml">Mi cuenta/ cambiar contraseña</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>Proceso de compra</h5>
+                                            <ul>
+                                                <li><a href="basket.xhtml">Detalle compra</a>
+                                                </li>
+                                                <li><a href="checkout1.xhtml">Datos de compra1</a>
+                                                </li>
+                                                <li><a href="checkout2.xhtml">Datos de compra2</a>
+                                                </li>
+                                                <li><a href="checkout3.xhtml">Datos de compra3</a>
+                                                </li>
+                                                <li><a href="checkout4.xhtml">Datos de compra4</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>Página y blog</h5>
+                                            <ul>
+                                                <li><a href="blog.xhtml">Lista de blog</a>
+                                                </li>
+                                                <li><a href="post.xhtml">Entrar al blog</a>
+                                                </li>
+                                                <li><a href="faq.xhtml">Preguntas frecuentes</a>
+                                                </li>
+                                                <li><a href="text.xhtml">Página de teto</a>
+                                                </li>
+                                                <li><a href="text-right.xhtml">Página de teto-barra lateral</a>
+                                                </li>
+                                                <li><a href="404.xhtml">Error 404</a>
+                                                </li>
+                                                <li><a href="contact">Contacto</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.yamm-content -->
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!--/.nav-collapse -->
+
+            <div class="navbar-buttons">
+
+                <div class="navbar-collapse collapse right" id="basket-overview">
+                    <a href="basket.xhmtl" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
+                </div>
+                <!--/.nav-collapse -->
+
+                <div class="navbar-collapse collapse right" id="search-not-mobile">
+                    <button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
+                        <span class="sr-only">Toggle search</span>
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="collapse clearfix" id="search">
+
+                <h:form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search"></input>
+                        <span class="input-group-btn">
+
+			<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+
+		    </span>
+                    </div>
+                </h:form>
+
+            </div>
+            <!--/.nav-collapse -->
+
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /#navbar -->
+   
+    <!-- *** NAVBAR END *** -->
+
+
+
+    <div id="all">
+
+        <div id="content">
+
+            <div class="container">
+                <div class="col-md-12">
+                    <div id="main-slider">
+                        <div class="item">
+                        <h:graphicImage value="/resources/img/main-slider1.jpg" alt="" class="img-responsive"/>                            
+                        </div>
+                        <div class="item">
+                        <h:graphicImage value="/resources/img/main-slider2.jpg" alt="" class="img-responsive"/>                            
+                        </div>
+                        <div class="item">
+                        <h:graphicImage value="/resources/img/main-slider3.jpg" alt="" class="img-responsive"/>                            
+                        </div>
+                        <div class="item">
+                        <h:graphicImage value="/resources/img/main-slider4.jpg" alt="" class="img-responsive"/>                            
+                        </div>
+                    </div>
+                    <!-- /#main-slider -->
+                </div>
+            </div>
+
+            <!-- *** ADVANTAGES HOMEPAGE ***
+ _________________________________________________________ -->
+            <div id="advantages">
+
+                <div class="container">
+                    <div class="same-height-row">
+                        <div class="col-sm-4">
+                            <div class="box same-height clickable">
+                                <div class="icon"><i class="fa fa-heart"></i>
+                                </div>
+
+                                <h3><a href="#">We love our customers</a></h3>
+                                <p>We are known to provide best possible service ever</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="box same-height clickable">
+                                <div class="icon"><i class="fa fa-tags"></i>
+                                </div>
+
+                                <h3><a href="#">Best prices</a></h3>
+                                <p>You can check that the height of the boxes adjust when longer text like this one is used in one of them.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="box same-height clickable">
+                                <div class="icon"><i class="fa fa-thumbs-up"></i>
+                                </div>
+
+                                <h3><a href="#">100% satisfaction guaranteed</a></h3>
+                                <p>Free returns on everything for 3 months.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+                </div>
+                <!-- /.container -->
+
+            </div>
+            <!-- /#advantages -->
+
+            <!-- *** ADVANTAGES END *** -->
+
+            <!-- *** HOT PRODUCT SLIDESHOW ***
+ _________________________________________________________ -->
+            <div id="hot">
+
+                <div class="box">
+                    <div class="container">
+                        <div class="col-md-12">
+                            <h2>Hot this week</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="product-slider">
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product1.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product1_2.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.xhtml" class="invisible">
+                                <h:graphicImage value="/resources/img/product1.jpg" alt="" class="img-responsive"/>                                    
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.xhtml">Fur coat with very but very very long name</a></h3>
+                                    <p class="price">$143.00</p>
+                                </div>
+                                <!-- /.text -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product2.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product2_2.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.xhtml" class="invisible">
+                                <h:graphicImage value="/resources/img/product2.jpg" alt="" class="img-responsive"/>                                    
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.xhtml">White Blouse Armani</a></h3>
+                                    <p class="price"><del>$280</del> $143.00</p>
+                                </div>
+                                <!-- /.text -->
+
+                                <div class="ribbon sale">
+                                    <div class="theribbon">SALE</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+
+                                <div class="ribbon new">
+                                    <div class="theribbon">NEW</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+
+                                <div class="ribbon gift">
+                                    <div class="theribbon">GIFT</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product3.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.xhtml">
+                                         <h:graphicImage value="/resources/img/product3_2.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.xhtml" class="invisible">
+                                <h:graphicImage value="/resources/img/product3.jpg" alt="" class="img-responsive"/>                                    
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.xhtml">Black Blouse Versace</a></h3>
+                                    <p class="price">$143.00</p>
+                                </div>
+                                <!-- /.text -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product3.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product3_2.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.xhtml" class="invisible">
+                                <h:graphicImage value="/resources/img/product3.jpg" alt="" class="img-responsive"/>                                    
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.xhtml">Black Blouse Versace</a></h3>
+                                    <p class="price">$143.00</p>
+                                </div>
+                                <!-- /.text -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product2.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product2_2.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.xhtml" class="invisible">
+                                <h:graphicImage value="/resources/img/product2.jpg" alt="" class="img-responsive"/>                                    
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.xhtml">White Blouse Versace</a></h3>
+                                    <p class="price">$143.00</p>
+                                </div>
+                                <!-- /.text -->
+
+                                <div class="ribbon new">
+                                    <div class="theribbon">NEW</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product1.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product1_2.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.xhtml" class="invisible">
+                                <h:graphicImage value="/resources/img/product1.jpg" alt="" class="img-responsive"/>                                    
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.xhtml">Fur coat</a></h3>
+                                    <p class="price">$143.00</p>
+                                </div>
+                                <!-- /.text -->
+
+                                <div class="ribbon gift">
+                                    <div class="theribbon">GIFT</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+
+                            </div>
+                            <!-- /.product -->
+                        </div>
+                        <!-- /.col-md-4 -->
+
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product2.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product2_2.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.xhtml" class="invisible">
+                                <h:graphicImage value="/resources/img/product2.jpg" alt="" class="img-responsive"/>                                    
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.xhtml">White Blouse Armani</a></h3>
+                                    <p class="price"><del>$280</del> $143.00</p>
+                                </div>
+                                <!-- /.text -->
+
+                                <div class="ribbon sale">
+                                    <div class="theribbon">SALE</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+
+                                <div class="ribbon new">
+                                    <div class="theribbon">NEW</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+
+                                <div class="ribbon gift">
+                                    <div class="theribbon">GIFT</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product3.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.xhtml">
+                                            <h:graphicImage value="/resources/img/product3_2.jpg" alt="" class="img-responsive"/>                                                
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.xhtml" class="invisible">
+                                <h:graphicImage value="/resources/img/product3.jpg" alt="" class="img-responsive"/>                                    
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.xhtml">Black Blouse Versace</a></h3>
+                                    <p class="price">$143.00</p>
+                                </div>
+                                <!-- /.text -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                    </div>
+                    <!-- /.product-slider -->
+                </div>
+                <!-- /.container -->
+
+            </div>
+            <!-- /#hot -->
+
+            <!-- *** HOT END *** -->
+
+            <!-- *** GET INSPIRED ***
+ _________________________________________________________ -->
+            <div class="container" data-animate="fadeInUpBig">
+                <div class="col-md-12">
+                    <div class="box slideshow">
+                        <h3>Get Inspired</h3>
+                        <p class="lead">Get the inspiration from our world class designers</p>
+                        <div id="get-inspired" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <a href="#">
+                                <h:graphicImage value="/resources/img/getinspired1.jpg" alt="Get inspired" class="img-responsive"/>                                    
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                <h:graphicImage value="/resources/img/getinspired2.jpg" alt="Get inspired" class="img-responsive"/>                                    
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                <h:graphicImage value="/resources/img/getinspired3.jpg" alt="Get inspired" class="img-responsive"/>                                    
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- *** GET INSPIRED END *** -->
+
+            <!-- *** BLOG HOMEPAGE ***
+ _________________________________________________________ -->
+
+            <div class="box text-center" data-animate="fadeInUp">
+                <div class="container">
+                    <div class="col-md-12">
+                        <h3 class="text-uppercase">From our blog</h3>
+
+                        <p class="lead">What's new in the world of fashion? <a href="blog.xhtml">Check our blog!</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="col-md-12" data-animate="fadeInUp">
+
+                    <div id="blog-homepage" class="row">
+                        <div class="col-sm-6">
+                            <div class="post">
+                                <h4><a href="post.xhtml">Fashion now</a></h4>
+                                <p class="author-category">By <a href="#">John Slim</a> in <a href="">Fashion and style</a>
+                                </p>
+                                <hr></hr>
+                                <p class="intro">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+                                    ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                <p class="read-more"><a href="post.xhtml" class="btn btn-primary">Continue reading</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="post">
+                                <h4><a href="post.xhtml">Who is who - example blog post</a></h4>
+                                <p class="author-category">By <a href="#">John Slim</a> in <a href="">About Minimal</a>
+                                </p>
+                                <hr></hr>
+                                <p class="intro">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+                                    ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                <p class="read-more"><a href="post..xhtml" class="btn btn-primary">Continue reading</a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- /#blog-homepage -->
+                </div>
+            </div>
+            <!-- /.container -->
+
+            <!-- *** BLOG HOMEPAGE END *** -->
+
+
+        </div>
+        <!-- /#content -->
+
+        <!-- *** FOOTER ***
+ _________________________________________________________ -->
+        <div id="footer" data-animate="fadeInUp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <h4>Pages</h4>
+
+                        <ul>
+                            <li><a href="text..xhtml">About us</a>
+                            </li>
+                            <li><a href="text..xhtml">Terms and conditions</a>
+                            </li>
+                            <li><a href="faq..xhtml">FAQ</a>
+                            </li>
+                            <li><a href="contact..xhtml">Contact us</a>
+                            </li>
+                        </ul>
+
+                        <hr></hr>
+
+                        <h4>User section</h4>
+
+                        <ul>
+                            <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+                            </li>
+                            <li><a href="register..xhtml">Regiter</a>
+                            </li>
+                        </ul>
+
+                        <hr class="hidden-md hidden-lg hidden-sm"></hr>
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                    <div class="col-md-3 col-sm-6">
+
+                        <h4>Top categories</h4>
+
+                        <h5>Men</h5>
+
+                        <ul>
+                            <li><a href="category..xhtml">T-shirts</a>
+                            </li>
+                            <li><a href="category..xhtml">Shirts</a>
+                            </li>
+                            <li><a href="category..xhtml">Accessories</a>
+                            </li>
+                        </ul>
+
+                        <h5>Ladies</h5>
+                        <ul>
+                            <li><a href="category..xhtml">T-shirts</a>
+                            </li>
+                            <li><a href="category..xhtml">Skirts</a>
+                            </li>
+                            <li><a href="category..xhtml">Pants</a>
+                            </li>
+                            <li><a href="category..xhtml">Accessories</a>
+                            </li>
+                        </ul>
+
+                        <hr class="hidden-md hidden-lg"></hr>
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                    <div class="col-md-3 col-sm-6">
+
+                        <h4>Where to find us</h4>
+
+                        <p><strong>Obaju Ltd.</strong>
+                            <br>13/25 New Avenue</br>
+                            <br>New Heaven</br>
+                            <br>45Y 73J</br>
+                            <br>England</br>
+                            <br></br>
+                            <strong>Great Britain</strong>
+                        </p>
+
+                        <a href="contact..xhtml">Go to contact page</a>
+
+                        <hr class="hidden-md hidden-lg"></hr>
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+
+
+                    <div class="col-md-3 col-sm-6">
+
+                        <h4>Get the news</h4>
+
+                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                        <h:form>
+                            <div class="input-group">
+
+                                <input type="text" class="form-control"></input>
+
+                                <span class="input-group-btn">
+
+			    <button class="btn btn-default" type="button">Subscribe!</button>
+
+			</span>
+
+                            </div>
+                            <!-- /input-group -->
+                        </h:form>
+
+                        <hr></hr>
+
+                        <h4>Stay in touch</h4>
+
+                        <p class="social">
+                            <a href="#" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="twitter external" data-animate-hover="shake"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="instagram external" data-animate-hover="shake"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="gplus external" data-animate-hover="shake"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="email external" data-animate-hover="shake"><i class="fa fa-envelope"></i></a>
+                        </p>
+
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#footer -->
+
+        <!-- *** FOOTER END *** -->
+
+
+
+
+        <!-- *** COPYRIGHT ***
+ _________________________________________________________ -->
+
+        <!-- *** COPYRIGHT END *** -->
+
+
+
+    </div>
+    <!-- /#all -->
+
+
+    
+
+    <!-- *** SCRIPTS TO INCLUDE ***
+ _________________________________________________________ -->
+<h:outputScript library="js" name="jquery-1.11.0.min.js" />
+<h:outputScript library="js" name="bootstrap.min.js" />
+<h:outputScript library="js" name="jquery.cookie.js" />        
+<h:outputScript library="js" name="waypoints.min.js" />    
+<h:outputScript library="js" name="modernizr.js" />    
+<h:outputScript library="js" name="bootstrap-hover-dropdown.js" />    
+<h:outputScript library="js" name="owl.carousel.min.js" />    
+<h:outputScript library="js" name="front.js" />  
+
+</h:body>
+
+</html>
