@@ -1,4 +1,4 @@
-package com.jsf.crud.db.operation;
+package mx.com.mwm.dao.impl;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,7 +10,7 @@ import java.util.Map;
 
 import javax.faces.context.FacesContext;
 
-import com.jsf.crud.StudentBean;
+import mx.com.mwm.dao.StudentBean;
 
 public class DatabaseOperation {
 

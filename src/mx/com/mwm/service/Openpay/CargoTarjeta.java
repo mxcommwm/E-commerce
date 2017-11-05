@@ -1,4 +1,4 @@
-package com.jsf.service.OpenPay;
+package mx.com.mwm.service.Openpay;
 
 public class CargoTarjeta {
 	

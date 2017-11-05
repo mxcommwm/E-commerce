@@ -1,4 +1,4 @@
-package com.jsf.beans;
+package mx.com.mwm.mbeans;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;

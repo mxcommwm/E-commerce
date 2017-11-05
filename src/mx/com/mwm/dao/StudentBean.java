@@ -1,4 +1,4 @@
-package com.jsf.crud;
+package mx.com.mwm.dao;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
-import com.jsf.crud.db.operation.DatabaseOperation;
+import mx.com.mwm.dao.impl.DatabaseOperation;
 
 @ManagedBean
 @RequestScoped

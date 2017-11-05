@@ -1,4 +1,4 @@
-package com.jsf.service.OpenPay;
+package mx.com.mwm.service.Openpay;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
