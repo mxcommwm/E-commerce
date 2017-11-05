@@ -18,6 +18,7 @@ public class StudentBean {
 	private String password;
 	private String gender;
 	private String address;
+	private String coco;
 
 	//ESTE ES UN CAMBIO CON GIT
 	
