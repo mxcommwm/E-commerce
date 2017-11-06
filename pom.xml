@@ -41,15 +41,15 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
- <groupId>javax.faces</groupId>
- <artifactId>javax.faces-api</artifactId>
- <version>2.2</version>
- </dependency>
- <dependency>
- <groupId>com.sun.faces</groupId>
- <artifactId>jsf-impl</artifactId>
- <version>2.2.9</version>
- </dependency>
+			<groupId>javax.faces</groupId>
+			<artifactId>javax.faces-api</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>2.2.9</version>
+		</dependency>
 		<!-- Primefaces Version 5 -->
 		<dependency>
 			<groupId>org.primefaces</groupId>
@@ -68,17 +68,34 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.6</version>
 		</dependency>
+		<!-- Dependencia de cliente Restfil @Autor:jorge -->
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-client</artifactId>
 			<version>1.8</version>
 		</dependency>
+		<!-- Dependencia de hibernate, jpa, y h2 @Autor: jorge -->
 		<dependency>
-			<groupId>org.primefaces</groupId>
-			<artifactId>primefaces</artifactId>
-			<version>6.1</version>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.2.12.Final</version>
 		</dependency>
-
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.196</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.2.12.Final</version>
+		</dependency>
+	<!-- Dependencia de hibernate,jpa, y h2 -->
 
 	</dependencies>
 
