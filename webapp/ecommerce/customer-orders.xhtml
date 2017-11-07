@@ -363,155 +363,122 @@
             <div class="container">
 
                 <div class="col-md-12">
+
                     <ul class="breadcrumb">
                         <li><a href="#">Inicio</a>
                         </li>
-                        <li>Contacto</li>
+                        <li>Mis compras</li>
                     </ul>
 
                 </div>
 
                 <div class="col-md-3">
-                    <!-- *** PAGES MENU ***
+                    <!-- *** CUSTOMER MENU ***
  _________________________________________________________ -->
                     <div class="panel panel-default sidebar-menu">
 
                         <div class="panel-heading">
-                            <h3 class="panel-title">Página</h3>
+                            <h3 class="panel-title">Sección del cliente</h3>
                         </div>
 
                         <div class="panel-body">
+
                             <ul class="nav nav-pills nav-stacked">
-                                <li>
-                                    <a href="#">Facebook</a>
+                                <li  class="active">
+                                    <a href="customer-orders.xhtml"><i class="fa fa-list"></i> Mis compras</a>
                                 </li>
                                 <li>
-                                    <a href="contact.xhtml">Whatsapp</a>
+                                    <a href="customer-account.xhtml"><i class="fa fa-user"></i> Mi cuenta</a>
                                 </li>
                                 <li>
-                                    <a href="faq.xhtml">Twitter</a>
+                                    <a href="index.xhtml"><i class="fa fa-sign-out"></i> Cerrar sesión</a>
                                 </li>
-
                             </ul>
-
                         </div>
+
                     </div>
+                    <!-- /.col-md-3 -->
 
-                    <!-- *** PAGES MENU END *** -->
+                    <!-- *** CUSTOMER MENU END *** -->
+                </div>
 
+                <div class="col-md-9" id="customer-orders">
+                    <div class="box">
+                        <h1>Mis compras</h1>
 
-                    <div class="banner">
-                        <a href="#">
-                            <h:graphicImage value="/resources/ecommerce/img/banner.png" alt="" class="img-responsive"/>
-                        </a>
+                        <p class="lead">Sus pedidos en un solo lugar.</p>
+                        <p class="text-muted">Si tiene alguna pregunta, no dude en ponerse en <a href="contact.xhtml">contacto con nosotros</a>, , nuestro centro de servicio al cliente está trabajando para usted las 24 horas del día, los 7 días de la semana.</p>
+
+                        <hr></hr>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Orden</th>
+                                        <th>Fecha</th>
+                                        <th>Total</th>
+                                        <th>Estado</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>#1735</th>
+                                        <td>22/06/2013</td>
+                                        <td>$ 150.00</td>
+                                        <td><span class="label label-info">En proceso</span>
+                                        </td>
+                                        <td><a href="customer-order.xhtml" class="btn btn-primary btn-sm">Ver</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th># 1735</th>
+                                        <td>22/06/2013</td>
+                                        <td>$ 150.00</td>
+                                        <td><span class="label label-info">En proceso</span>
+                                        </td>
+                                        <td><a href="customer-order.xhtml" class="btn btn-primary btn-sm">Ver</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th># 1735</th>
+                                        <td>22/06/2013</td>
+                                        <td>$ 150.00</td>
+                                        <td><span class="label label-success">Recibido</span>
+                                        </td>
+                                        <td><a href="customer-order.xhtml" class="btn btn-primary btn-sm">Ver</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th># 1735</th>
+                                        <td>22/06/2013</td>
+                                        <td>$ 150.00</td>
+                                        <td><span class="label label-danger">Cancelado</span>
+                                        </td>
+                                        <td><a href="customer-order.xhtml" class="btn btn-primary btn-sm">Ver</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th># 1735</th>
+                                        <td>22/06/2013</td>
+                                        <td>$ 150.00</td>
+                                        <td><span class="label label-warning">En espera</span>
+                                        </td>
+                                        <td><a href="customer-order.xhtml" class="btn btn-primary btn-sm">Ver</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-md-9">
-
-
-                    <div class="box" id="contact">
-                        <h1>Contacto</h1>
-
-                        <p class="lead">¿Tienes curiosidad por algo? ¿Tienes algún tipo de problema con nuestros productos?</p>
-                        <p>Por favor, siéntase libre de contactarnos, nuestro centro de servicio al cliente está trabajando para usted 24/7.</p>
-
-                        <hr></hr>
-
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-map-marker"></i> Dirección</h3>
-                                <p>Calle Fuente de Cristal
-                                    <br>Fraccionamiento Fuentes del Bosque</br>
-                                    <br>Código Postal 81229</br>
-                                    <br>Los Mochis, Sinaloa</br>                                    
-                                    <br></br>
-                                    <strong>México</strong>
-                                </p>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-phone"></i> Centro de llamadas</h3>
-                                <p class="text-muted">Este número es gratuito si llama desde Los Mochis, Sinaloa, de lo contrario, le recomendamos utilizar la forma electrónica de comunicación.</p>
-                                <p><strong>55 555 444 333</strong>
-                                </p>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-envelope"></i> Soporte electrónico</h3>
-                                <p class="text-muted">Por favor, siéntase libre de escribirnos un correo electrónico o utilizar nuestro sistema electrónico de venta de entradas.</p>
-                                <ul>
-                                    <li><strong><a href="mailto:">mwm@gmail.com</a></strong>
-                                    </li>                                    
-                                </ul>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                        </div>
-                        <!-- /.row -->
-
-                        <hr></hr>
-
-                        <div id="map">
-
-                        </div>
-
-                        <hr></hr>
-                        <h2>Formulario de contacto</h2>
-
-                        <h:form>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="firstname">Nombre(s)</label>
-                                        <input type="text" class="form-control" id="firstname"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="lastname">Apellidos</label>
-                                        <input type="text" class="form-control" id="lastname"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="text" class="form-control" id="email"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="subject">Asunto</label>
-                                        <input type="text" class="form-control" id="subject"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="message">Mensaje</label>
-                                        <textarea id="message" class="form-control"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-12 text-center">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Enviar mensaje</button>
-
-                                </div>
-                            </div>
-                            <!-- /.row -->
-                        </h:form>
-
-
-                    </div>
-
-
-                </div>
-                <!-- /.col-md-9 -->
             </div>
             <!-- /.container -->
         </div>
         <!-- /#content -->
 
-
-       
 <!-- PIE DE PÁGINA-->
  <div class="box marcas">    
     <div class="row">
@@ -563,31 +530,6 @@
 <h:outputScript name="ecommerce/js/bootstrap-hover-dropdown.js" />    
 <h:outputScript name="ecommerce/js/owl.carousel.min.js" />    
 <h:outputScript name="ecommerce/js/front.js" /> 
-
-
-
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhod3cFLS-YpLC7HMQczdixy-8mHkbkOI"></script>
-
-    <script>
-        function initialize() {
-            var mapOptions = {
-                zoom: 15,
-                center: new google.maps.LatLng(25.81143,-108.9918581),
-                mapTypeId: google.maps.MapTypeId.ROAD,
-                scrollwheel: false
-            }
-            var map = new google.maps.Map(document.getElementById('map'),
-                mapOptions);
-
-            var myLatLng = new google.maps.LatLng(25.8114252, -108.9896694);
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map
-            });
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script> 
 
 </h:body>
 

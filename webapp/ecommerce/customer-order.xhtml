@@ -363,155 +363,149 @@
             <div class="container">
 
                 <div class="col-md-12">
+
                     <ul class="breadcrumb">
-                        <li><a href="#">Inicio</a>
+                        <li><a href="index.xhtml">Inicio</a>
                         </li>
-                        <li>Contacto</li>
+                        <li><a href="#">Mis compras</a>
+                        </li>
+                        <li>Orden # 1735</li>
                     </ul>
 
                 </div>
 
                 <div class="col-md-3">
-                    <!-- *** PAGES MENU ***
+                    <!-- *** CUSTOMER MENU ***
  _________________________________________________________ -->
-                    <div class="panel panel-default sidebar-menu">
+                                       <div class="panel panel-default sidebar-menu">
 
                         <div class="panel-heading">
-                            <h3 class="panel-title">Página</h3>
+                            <h3 class="panel-title">Sección del cliente</h3>
                         </div>
 
                         <div class="panel-body">
+
                             <ul class="nav nav-pills nav-stacked">
-                                <li>
-                                    <a href="#">Facebook</a>
+                                <li  class="active">
+                                    <a href="customer-orders.xhtml"><i class="fa fa-list"></i> Mis compras</a>
                                 </li>
                                 <li>
-                                    <a href="contact.xhtml">Whatsapp</a>
+                                    <a href="customer-account.xhtml"><i class="fa fa-user"></i> Mi cuenta</a>
                                 </li>
                                 <li>
-                                    <a href="faq.xhtml">Twitter</a>
+                                    <a href="index.xhtml"><i class="fa fa-sign-out"></i> Cerrar sesión</a>
                                 </li>
-
                             </ul>
-
                         </div>
+
                     </div>
+                    <!-- /.col-md-3 -->
 
-                    <!-- *** PAGES MENU END *** -->
-
-
-                    <div class="banner">
-                        <a href="#">
-                            <h:graphicImage value="/resources/ecommerce/img/banner.png" alt="" class="img-responsive"/>
-                        </a>
-                    </div>
+                    <!-- *** CUSTOMER MENU END *** -->
                 </div>
 
-                <div class="col-md-9">
+                <div class="col-md-9" id="customer-order">
+                    <div class="box">
+                        <h1>Orden #1735</h1>
 
-
-                    <div class="box" id="contact">
-                        <h1>Contacto</h1>
-
-                        <p class="lead">¿Tienes curiosidad por algo? ¿Tienes algún tipo de problema con nuestros productos?</p>
-                        <p>Por favor, siéntase libre de contactarnos, nuestro centro de servicio al cliente está trabajando para usted 24/7.</p>
+                        <p class="lead">El pedido n.º 1735 se realizó el <strong>07/11/2017</strong> y actualmente se está <strong>preparando</strong>.</p>
+                        <p class="text-muted">Si tiene alguna pregunta, no dude en ponerse en <a href="contact.xhtml">contacto con nosotros</a>, , nuestro centro de servicio al cliente está trabajando para usted las 24 horas del día, los 7 días de la semana.</p>
 
                         <hr></hr>
 
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-map-marker"></i> Dirección</h3>
-                                <p>Calle Fuente de Cristal
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio unitario</th>
+                                        <th>Descuento</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#">
+                                                <h:graphicImage value="/resources/ecommerce/img/detailsquare.jpg" alt="White Blouse Armani"/>  
+                                            </a>
+                                        </td>
+                                        <td><a href="#">Cámara falsa(fantasma), con Leds que encienden en la noche (No parpadea) baterías no incluidas</a>
+                                        </td>
+                                        <td>2</td>
+                                        <td>$123.00</td>
+                                        <td>$0.00</td>
+                                        <td>$246.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#">
+                                              <h:graphicImage value="/resources/ecommerce/img/a2.jpg" alt="Black Blouse Armani"/>
+                                            </a>
+                                        </td>
+                                        <td><a href="#">UFiber GPON ONU, Unidad de red óptica con 1 puerto WAN GPON + 1 puerto LAN Gigabit</a>
+                                        </td>
+                                        <td>1</td>
+                                        <td>$200.00</td>
+                                        <td>$0.00</td>
+                                        <td>$200.00</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="5" class="text-right">Subtotal</th>
+                                        <th>$446.00</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="5" class="text-right">Envío</th>
+                                        <th>$10.00</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="5" class="text-right">I.V.A.</th>
+                                        <th>$0.00</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="5" class="text-right">Total</th>
+                                        <th>$456.00</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+
+                        </div>
+                        <!-- /.table-responsive -->
+
+                        <div class="row addresses">
+                            <div class="col-md-6 text-xs-center">
+                                <h2>Dirección de facturación</h2>
+                                <p>Nombre Cliente
+                                    <br>Calle Fuente de Cristal </br>
                                     <br>Fraccionamiento Fuentes del Bosque</br>
                                     <br>Código Postal 81229</br>
-                                    <br>Los Mochis, Sinaloa</br>                                    
-                                    <br></br>
-                                    <strong>México</strong>
-                                </p>
+                                    <br>Los Mochis, Sinaloa</br>
+                                    <br>México</br>
+                </p>
                             </div>
-                            <!-- /.col-sm-4 -->
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-phone"></i> Centro de llamadas</h3>
-                                <p class="text-muted">Este número es gratuito si llama desde Los Mochis, Sinaloa, de lo contrario, le recomendamos utilizar la forma electrónica de comunicación.</p>
-                                <p><strong>55 555 444 333</strong>
-                                </p>
+                            <div class="col-md-6 text-md-justify" >
+                                <h2>Dirección de envío</h2>
+                               <p>Nombre Cliente
+                                    <br>Calle Fuente de Cristal </br>
+                                    <br>Fraccionamiento Fuentes del Bosque</br>
+                                    <br>Código Postal 81229</br>
+                                    <br>Los Mochis, Sinaloa</br>
+                                    <br>México</br>
+</p>
                             </div>
-                            <!-- /.col-sm-4 -->
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-envelope"></i> Soporte electrónico</h3>
-                                <p class="text-muted">Por favor, siéntase libre de escribirnos un correo electrónico o utilizar nuestro sistema electrónico de venta de entradas.</p>
-                                <ul>
-                                    <li><strong><a href="mailto:">mwm@gmail.com</a></strong>
-                                    </li>                                    
-                                </ul>
-                            </div>
-                            <!-- /.col-sm-4 -->
                         </div>
-                        <!-- /.row -->
-
-                        <hr></hr>
-
-                        <div id="map">
-
-                        </div>
-
-                        <hr></hr>
-                        <h2>Formulario de contacto</h2>
-
-                        <h:form>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="firstname">Nombre(s)</label>
-                                        <input type="text" class="form-control" id="firstname"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="lastname">Apellidos</label>
-                                        <input type="text" class="form-control" id="lastname"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="text" class="form-control" id="email"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="subject">Asunto</label>
-                                        <input type="text" class="form-control" id="subject"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="message">Mensaje</label>
-                                        <textarea id="message" class="form-control"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-12 text-center">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Enviar mensaje</button>
-
-                                </div>
-                            </div>
-                            <!-- /.row -->
-                        </h:form>
-
 
                     </div>
-
-
                 </div>
-                <!-- /.col-md-9 -->
+
             </div>
             <!-- /.container -->
         </div>
         <!-- /#content -->
 
-
-       
 <!-- PIE DE PÁGINA-->
  <div class="box marcas">    
     <div class="row">
@@ -563,31 +557,6 @@
 <h:outputScript name="ecommerce/js/bootstrap-hover-dropdown.js" />    
 <h:outputScript name="ecommerce/js/owl.carousel.min.js" />    
 <h:outputScript name="ecommerce/js/front.js" /> 
-
-
-
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhod3cFLS-YpLC7HMQczdixy-8mHkbkOI"></script>
-
-    <script>
-        function initialize() {
-            var mapOptions = {
-                zoom: 15,
-                center: new google.maps.LatLng(25.81143,-108.9918581),
-                mapTypeId: google.maps.MapTypeId.ROAD,
-                scrollwheel: false
-            }
-            var map = new google.maps.Map(document.getElementById('map'),
-                mapOptions);
-
-            var myLatLng = new google.maps.LatLng(25.8114252, -108.9896694);
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map
-            });
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script> 
 
 </h:body>
 

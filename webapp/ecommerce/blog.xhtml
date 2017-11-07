@@ -3,9 +3,10 @@
 	xmlns:h="http://java.sun.com/jsf/html" 
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
+
 <h:head>
 
-    
+    <meta charset="utf-8"/>
     <meta name="robots" content="all,follow"/>
     <meta name="googlebot" content="index,follow,snippet,archive"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -15,31 +16,26 @@
 
     <title>MWM E-commerce</title>
 
-    <meta name="keywords" content=""/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <meta name="keywords" content=""/>	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'/>
 
-    <!-- Estilos -->
-    
-    <h:outputStylesheet name="ecommerce/css/bootstrap.min.css" />
-    <h:outputStylesheet name="ecommerce/css/font-awesome.css" />
-    <h:outputStylesheet name="ecommerce/css/font-awesome.min.css" />
-    <h:outputStylesheet name="ecommerce/css/animate.min.css" />
-    <h:outputStylesheet name="ecommerce/css/owl.carousel.css" />
-    <h:outputStylesheet name="ecommerce/css/owl.theme.css" />   
+    <!-- Estilos -->    
+    <h:outputStylesheet  name="ecommerce/css/bootstrap.min.css" />
+    <h:outputStylesheet  name="ecommerce/css/font-awesome.css" />
+    <h:outputStylesheet  name="ecommerce/css/font-awesome.min.css" />
+    <h:outputStylesheet  name="ecommerce/css/animate.min.css" />
+    <h:outputStylesheet  name="ecommerce/css/owl.carousel.css" />
+    <h:outputStylesheet  name="ecommerce/css/owl.theme.css" />   
 
     <!-- CHECAR ESTA PARTE -->
-    <h:outputStylesheet name="ecommerce/css/style.blue.css" id="theme-stylesheet"/>  
+    <h:outputStylesheet  name="ecommerce/css/style.blue.css" id="theme-stylesheet"/>  
 
     <!-- your stylesheet with modifications -->
-    <h:outputStylesheet name="ecommerce/css/custom.css" />
-    <h:outputScript name="ecommerce/js/respond.min.js" />
+    <h:outputStylesheet  name="ecommerce/css/custom.css" />
+    <h:outputScript  name="ecommerce/js/respond.min.js" />
 
-<link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
-		
-
-
-
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>		
 </h:head>
 
 <h:body>
@@ -66,7 +62,7 @@
 
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> <span aria-hidden="true">&times;</span></button>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title" id="Login">Inicie sesión</h4>
                     </div>
                     <div class="modal-body">
@@ -105,8 +101,8 @@
             <div class="navbar-header">
 
                 <a class="navbar-brand home" href="index.xhtml" data-animate-hover="bounce">
-                <h:graphicImage value="/resources/ecommerce/img/logo.ico" 	 alt="MWM" class="hidden-xs img" id="img"/>
-                <h:graphicImage value="/resources/ecommerce/img/logo-small.png" alt="MWM" class="visible-xs" id="imagen"/><span class="sr-only">MWM</span>
+                <h:graphicImage value="/resources/ecommerce/img/logo.ico" 	 alt="Obaju logo" class="hidden-xs img" id="img"/>
+                <h:graphicImage value="/resources/ecommerce/img/logo-small.png" alt="Obaju logo" class="visible-xs" id="imagen"/><span class="sr-only">MWM</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -321,7 +317,7 @@
             <div class="navbar-buttons">
 
                 <div class="navbar-collapse collapse right" id="basket-overview">
-                    <a href="basket.xhtml" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">0 Productos</span></a>
+                    <a href="basket.xhtml" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
                 </div>
                 <!--/.nav-collapse -->
 
@@ -338,7 +334,7 @@
 
                 <h:form class="navbar-form" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Buscar"></input>
+                        <input type="text" class="form-control" placeholder="Search"></input>
                         <span class="input-group-btn">
 
 			<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
@@ -361,189 +357,130 @@
 
         <div id="content">
             <div class="container">
+              <!-- *** LEFT COLUMN ***
+		     _________________________________________________________ -->
 
-                <div class="col-md-12">
+                <div class="col-sm-9" id="blog-listing">
+
                     <ul class="breadcrumb">
+
                         <li><a href="#">Inicio</a>
                         </li>
-                        <li>Contacto</li>
+                        <li>Blog</li>
                     </ul>
 
-                </div>
 
-                <div class="col-md-3">
-                    <!-- *** PAGES MENU ***
- _________________________________________________________ -->
-                    <div class="panel panel-default sidebar-menu">
+                    <div class="box">
 
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Página</h3>
-                        </div>
-
-                        <div class="panel-body">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li>
-                                    <a href="#">Facebook</a>
-                                </li>
-                                <li>
-                                    <a href="contact.xhtml">Whatsapp</a>
-                                </li>
-                                <li>
-                                    <a href="faq.xhtml">Twitter</a>
-                                </li>
-
-                            </ul>
-
-                        </div>
-                    </div>
-
-                    <!-- *** PAGES MENU END *** -->
-
-
-                    <div class="banner">
-                        <a href="#">
-                            <h:graphicImage value="/resources/ecommerce/img/banner.png" alt="" class="img-responsive"/>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-9">
-
-
-                    <div class="box" id="contact">
-                        <h1>Contacto</h1>
-
-                        <p class="lead">¿Tienes curiosidad por algo? ¿Tienes algún tipo de problema con nuestros productos?</p>
-                        <p>Por favor, siéntase libre de contactarnos, nuestro centro de servicio al cliente está trabajando para usted 24/7.</p>
-
-                        <hr></hr>
-
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-map-marker"></i> Dirección</h3>
-                                <p>Calle Fuente de Cristal
-                                    <br>Fraccionamiento Fuentes del Bosque</br>
-                                    <br>Código Postal 81229</br>
-                                    <br>Los Mochis, Sinaloa</br>                                    
-                                    <br></br>
-                                    <strong>México</strong>
-                                </p>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-phone"></i> Centro de llamadas</h3>
-                                <p class="text-muted">Este número es gratuito si llama desde Los Mochis, Sinaloa, de lo contrario, le recomendamos utilizar la forma electrónica de comunicación.</p>
-                                <p><strong>55 555 444 333</strong>
-                                </p>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-envelope"></i> Soporte electrónico</h3>
-                                <p class="text-muted">Por favor, siéntase libre de escribirnos un correo electrónico o utilizar nuestro sistema electrónico de venta de entradas.</p>
-                                <ul>
-                                    <li><strong><a href="mailto:">mwm@gmail.com</a></strong>
-                                    </li>                                    
-                                </ul>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                        </div>
-                        <!-- /.row -->
-
-                        <hr></hr>
-
-                        <div id="map">
-
-                        </div>
-
-                        <hr></hr>
-                        <h2>Formulario de contacto</h2>
-
-                        <h:form>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="firstname">Nombre(s)</label>
-                                        <input type="text" class="form-control" id="firstname"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="lastname">Apellidos</label>
-                                        <input type="text" class="form-control" id="lastname"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="text" class="form-control" id="email"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="subject">Asunto</label>
-                                        <input type="text" class="form-control" id="subject"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="message">Mensaje</label>
-                                        <textarea id="message" class="form-control"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-12 text-center">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Enviar mensaje</button>
-
-                                </div>
-                            </div>
-                            <!-- /.row -->
-                        </h:form>
-
+                        <h1>Nombre de la categoría del blog</h1>
+                        <p>Sed neque est, tempor et vestibulum sit amet, dapibus laoreet lacus. Aliquam non sapien efficitur dui pulvinar malesuada a nec lacus. Etiam faucibus luctus rhoncus. Ut vulputate volutpat nulla non interdum. Pellentesque quam nibh, imperdiet vitae nisl et, euismod mattis mi. Pellentesque varius, metus ac viverra suscipit, augue erat bibendum diam, eget placerat enim justo quis massa. Morbi congue lacus ac euismod pulvinar.</p>
 
                     </div>
+
+                    <div class="post">
+                        <h2><a href="post.xhtml">Enlaces Punto a Multipunto</a></h2>
+                        <p class="author-category">Por <a href="#">John Slim</a> en<a href="">Mercado Wisp México </a>
+                        </p>
+                        <hr></hr>
+                        <p class="date-comments">
+                            <a href="post.xhtml"><i class="fa fa-calendar-o"></i> 06 de noviembre de 2017</a>
+                            <a href="post.xhtml"><i class="fa fa-comment-o"></i> # comentarios</a>
+                        </p>
+                        <div class="image">
+                            <a href="post.xhtml">
+                                <h:graphicImage value="/resources/ecommerce/img/blog2.jpg" alt="Example blog post alt" class="img-responsive"/>
+                            </a>
+                        </div>
+                        <p class="intro">Nam est lacus, accumsan a sollicitudin at, lacinia vitae urna. Phasellus non urna hendrerit, aliquet ex vel, pharetra diam. Curabitur convallis, risus non molestie facilisis, erat arcu tincidunt justo, a dictum sem ex vitae dui. Phasellus sit amet hendrerit leo. </p>
+                        <p class="read-more"><a href="post.xhtml" class="btn btn-primary">Continuar leyendo</a>
+                        </p>
+                    </div>
+
+
+                    <div class="post">
+                        <h2><a href="post.xhtml">Enlaces Punto a Punto</a></h2>
+                        <p class="author-category">Por <a href="#">John Slim</a> en <a href="">Mercado Wisp México</a>
+                        </p>
+                        <hr></hr>
+                        <p class="date-comments">
+                            <a href="post.xhtml"><i class="fa fa-calendar-o"></i> 06 de noviembre de 2017</a>
+                            <a href="post.xhtml"><i class="fa fa-comment-o"></i> # comentarios</a>
+                        </p>
+                        <div class="image">
+                            <a href="post.xhtml">
+                                <h:graphicImage value="/resources/ecommerce/img/epp.png" alt="" class="img-responsive"/>
+                            </a>
+                        </div>
+                        <p class="intro">Vivamus lobortis suscipit odio, porta aliquam justo ullamcorper in. Sed accumsan massa a condimentum pretium. Mauris vel ligula vel lorem convallis euismod. Nam pulvinar eros ac risus venenatis condimentum</p>
+                        <p class="read-more"><a href="post.xhtml" class="btn btn-primary">Continuar leyendo 	 </a>
+                        </p>
+                    </div>
+
+                    <ul class="pager">
+                        <li class="previous"><a href="#"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Atrás</a>
+                        </li>
+                        <li class="next disabled"><a href="#">Siguiente<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+
 
 
                 </div>
                 <!-- /.col-md-9 -->
+
+                <!-- *** LEFT COLUMN END *** -->
+
+
+                <div class="col-md-3">
+                    <!-- *** BLOG MENU ***
+ _________________________________________________________ -->
+                    <div class="panel panel-default sidebar-menu">
+
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Blog</h3>
+                        </div>
+
+                        <div class="panel-body">
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li>
+                                    <a href="blog.xhtml">Sobre nosotros</a>
+                                </li>
+                                <li class="active">
+                                    <a href="blog.xhtml">Redes</a>
+                                </li>
+                                <li>
+                                    <a href="blog.xhtml">Noticiass</a>
+                                </li>
+                                <li>
+                                    <a href="blog.xhtml">Proyectos recientes</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                    <!-- *** BLOG MENU END *** -->
+
+                    <div class="banner">
+                        <a href="#">
+                            <h:graphicImage value="/resources/ecommerce/img/banner.jpg" alt="" class="img-responsive"/>                            
+                        </a>
+                    </div>
+                </div>
+
+
             </div>
             <!-- /.container -->
         </div>
         <!-- /#content -->
 
 
-       
-<!-- PIE DE PÁGINA-->
- <div class="box marcas">    
-    <div class="row">
-        <div class="col-sm-12">
-                    <p class="font-weight-bold text-center">LAS MEJORES MARCAS</p>            
-        </div>        
-    </div>    
-    <div class="row">                
-        <div class="col-sm-3 "></div>
-        <div class="col-sm-1 col-xs-2">
-        <h:graphicImage value="/resources/ecommerce/img/marca1.png" alt="Ubiquiti" class="img-responsive"/>                        
-        </div>
-        <div class="col-sm-1 col-xs-2">
-        <h:graphicImage value="/resources/ecommerce/img/marca2.png" alt="Mimosa" class="img-responsive"/>                         
-        </div>
-        <div class="col-sm-1 col-xs-2">
-        <h:graphicImage value="/resources/ecommerce/img/marca3.png" alt="Epcom" class="img-responsive"/>                        
-        </div>
-        <div class="col-sm-1 col-xs-2">
-        <h:graphicImage value="/resources/ecommerce/img/marca4.png" alt="HikVision" class="img-responsive"/>                        
-        </div>   
-        <div class="col-sm-1 col-xs-2">
-        <h:graphicImage value="/resources/ecommerce/img/marca5.png" alt="Honeywell" class="img-responsive"/>                        
-        </div>
-        <div class="col-sm-2 col-xs-2   ">
-        <h:graphicImage value="/resources/ecommerce/img/marca6.png" alt="Cambium Networks" class="img-responsive"/>                         
-        </div>                  
-        <div class="col-sm-2"></div>
-    </div>        
-</div>                                               
-        
-        <div id="footer" data-animate="fadeInUp">
+        <!-- *** FOOTER ***
+ _________________________________________________________ -->
+        <!-- *** FOOTER END *** -->
+ <div id="footer" data-animate="fadeInUp">
             
                 <p class="parrafo">2017 © Mercado Wisp México Todos los derechos reservados</p>            
                         <p class="social">
@@ -551,43 +488,34 @@
                             <a href="#" class="twitter external" data-animate-hover="shake"><i class="fa fa-twitter"></i></a>                            
                             <a href="#" class="email external" data-animate-hover="shake"><i class="fa fa-whatsapp" ></i></a>
                         </p>
-            </div>                
-        </div>               
+            </div>   
+
+
+
+
+
+        <!-- *** COPYRIGHT ***
+ _________________________________________________________ -->
+        <!-- *** COPYRIGHT END *** -->
+
+
+
+    </div>
+    <!-- /#all -->
+
+
+    
+
     <!-- *** SCRIPTS TO INCLUDE ***
  _________________________________________________________ -->
-<h:outputScript name="ecommerce/js/jquery-1.11.0.min.js" />
-<h:outputScript name="ecommerce/js/bootstrap.min.js" />
-<h:outputScript name="ecommerce/js/jquery.cookie.js" />        
-<h:outputScript name="ecommerce/js/waypoints.min.js" />    
-<h:outputScript name="ecommerce/js/modernizr.js" />    
-<h:outputScript name="ecommerce/js/bootstrap-hover-dropdown.js" />    
-<h:outputScript name="ecommerce/js/owl.carousel.min.js" />    
-<h:outputScript name="ecommerce/js/front.js" /> 
-
-
-
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhod3cFLS-YpLC7HMQczdixy-8mHkbkOI"></script>
-
-    <script>
-        function initialize() {
-            var mapOptions = {
-                zoom: 15,
-                center: new google.maps.LatLng(25.81143,-108.9918581),
-                mapTypeId: google.maps.MapTypeId.ROAD,
-                scrollwheel: false
-            }
-            var map = new google.maps.Map(document.getElementById('map'),
-                mapOptions);
-
-            var myLatLng = new google.maps.LatLng(25.8114252, -108.9896694);
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map
-            });
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script> 
+<h:outputScript  name="ecommerce/js/jquery-1.11.0.min.js" />
+<h:outputScript  name="ecommerce/js/bootstrap.min.js" />
+<h:outputScript  name="ecommerce/js/jquery.cookie.js" />        
+<h:outputScript  name="ecommerce/js/waypoints.min.js" />    
+<h:outputScript  name="ecommerce/js/modernizr.js" />    
+<h:outputScript  name="ecommerce/js/bootstrap-hover-dropdown.js" />    
+<h:outputScript  name="ecommerce/js/owl.carousel.min.js" />    
+<h:outputScript  name="ecommerce/js/front.js" />  
 
 </h:body>
 

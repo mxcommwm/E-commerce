@@ -366,152 +366,141 @@
                     <ul class="breadcrumb">
                         <li><a href="#">Inicio</a>
                         </li>
-                        <li>Contacto</li>
+                        <li>Revisar compra</li>
                     </ul>
-
                 </div>
 
-                <div class="col-md-3">
-                    <!-- *** PAGES MENU ***
- _________________________________________________________ -->
-                    <div class="panel panel-default sidebar-menu">
+                <div class="col-md-9" id="checkout">
 
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Página</h3>
-                        </div>
-
-                        <div class="panel-body">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li>
-                                    <a href="#">Facebook</a>
+                    <div class="box">
+                        <h:form method="post" action="checkout4.xhtml">
+                            <h1>Revisar compra</h1>
+                            <ul class="nav nav-pills nav-justified">
+                                <li><a href="checkout1.xhtml"><i class="fa fa-map-marker"></i><br></br>Dirección</a>
                                 </li>
-                                <li>
-                                    <a href="contact.xhtml">Whatsapp</a>
+                                <li><a href="checkout2.xhtml"><i class="fa fa-truck"></i><br></br>Método de entrega</a>
                                 </li>
-                                <li>
-                                    <a href="faq.xhtml">Twitter</a>
+                                <li><a href="checkout3.xhtml"><i class="fa fa-money"></i><br></br>Método de pago</a>
                                 </li>
-
+                                <li class="active"><a href="#"><i class="fa fa-eye"></i><br></br>Revisar compra</a>
+                                </li>
                             </ul>
 
-                        </div>
-                    </div>
+                            <div class="content">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Productos</th>
+                                                <th>Cantidad</th>
+                                                <th>Precio Unitario</th>
+                                                <th>Descuento</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="#">
+                                                         <h:graphicImage value="/resources/ecommerce/img/detailsquare.jpg" alt=""/>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Cámara falsa(fantasma), con Leds que encienden en la noche (No parpadea) baterías no incluidas</a>
+                                                </td>
+                                                <td>2</td>
+                                                <td>$123.00</td>
+                                                <td>$0.00</td>
+                                                <td>$246.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#">
+                                                         <h:graphicImage value="/resources/ecommerce/img/a2.jpg" alt=""/>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">UFiber GPON ONU, Unidad de red óptica con 1 puerto WAN GPON + 1 puerto LAN Gigabit</a>
+                                                </td>
+                                                <td>1</td>
+                                                <td>$200.00</td>
+                                                <td>$0.00</td>
+                                                <td>$200.00</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th colspan="5">Total</th>
+                                                <th>$446.00</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
 
-                    <!-- *** PAGES MENU END *** -->
-
-
-                    <div class="banner">
-                        <a href="#">
-                            <h:graphicImage value="/resources/ecommerce/img/banner.png" alt="" class="img-responsive"/>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-9">
-
-
-                    <div class="box" id="contact">
-                        <h1>Contacto</h1>
-
-                        <p class="lead">¿Tienes curiosidad por algo? ¿Tienes algún tipo de problema con nuestros productos?</p>
-                        <p>Por favor, siéntase libre de contactarnos, nuestro centro de servicio al cliente está trabajando para usted 24/7.</p>
-
-                        <hr></hr>
-
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-map-marker"></i> Dirección</h3>
-                                <p>Calle Fuente de Cristal
-                                    <br>Fraccionamiento Fuentes del Bosque</br>
-                                    <br>Código Postal 81229</br>
-                                    <br>Los Mochis, Sinaloa</br>                                    
-                                    <br></br>
-                                    <strong>México</strong>
-                                </p>
+                                </div>
+                                <!-- /.table-responsive -->
                             </div>
-                            <!-- /.col-sm-4 -->
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-phone"></i> Centro de llamadas</h3>
-                                <p class="text-muted">Este número es gratuito si llama desde Los Mochis, Sinaloa, de lo contrario, le recomendamos utilizar la forma electrónica de comunicación.</p>
-                                <p><strong>55 555 444 333</strong>
-                                </p>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-envelope"></i> Soporte electrónico</h3>
-                                <p class="text-muted">Por favor, siéntase libre de escribirnos un correo electrónico o utilizar nuestro sistema electrónico de venta de entradas.</p>
-                                <ul>
-                                    <li><strong><a href="mailto:">mwm@gmail.com</a></strong>
-                                    </li>                                    
-                                </ul>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                        </div>
-                        <!-- /.row -->
+                            <!-- /.content -->
 
-                        <hr></hr>
-
-                        <div id="map">
-
-                        </div>
-
-                        <hr></hr>
-                        <h2>Formulario de contacto</h2>
-
-                        <h:form>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="firstname">Nombre(s)</label>
-                                        <input type="text" class="form-control" id="firstname"/>
-                                    </div>
+                            <div class="box-footer">
+                                <div class="pull-left">
+                                    <a href="checkout3.xhtml" class="btn btn-default"><i class="fa fa-chevron-left"></i>Vovler a Método de Pago</a>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="lastname">Apellidos</label>
-                                        <input type="text" class="form-control" id="lastname"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="text" class="form-control" id="email"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="subject">Asunto</label>
-                                        <input type="text" class="form-control" id="subject"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="message">Mensaje</label>
-                                        <textarea id="message" class="form-control"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-12 text-center">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Enviar mensaje</button>
-
+                                <div class="pull-right">
+                                    <button type="submit" class="btn btn-primary">Confirmar compra<i class="fa fa-chevron-right"></i>
+                                    </button>
                                 </div>
                             </div>
-                            <!-- /.row -->
                         </h:form>
-
-
                     </div>
+                    <!-- /.box -->
 
 
                 </div>
                 <!-- /.col-md-9 -->
+
+                <div class="col-md-3">
+
+                    <div class="box" id="order-summary">
+                        <div class="box-header">
+                            <h3>Resúmen de orden</h3>
+                        </div>
+                        <p class="text-muted">El envío y los costos adicionales se calculan en función de los valores que ingresó.</p>
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>Subtotal</td>
+                                        <th>$446.00</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Envío</td>
+                                        <th>$10.00</th>
+                                    </tr>
+                                    <tr>
+                                        <td>I.V.A.</td>
+                                        <th>$0.00</th>
+                                    </tr>
+                                    <tr class="total">
+                                        <td>Total</td>
+                                        <th>$456.00</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>  
+
+
+                </div>
+                <!-- /.col-md-3 -->
+
             </div>
             <!-- /.container -->
         </div>
         <!-- /#content -->
 
+ <!-- /#content -->
 
-       
+
 <!-- PIE DE PÁGINA-->
  <div class="box marcas">    
     <div class="row">
@@ -562,32 +551,7 @@
 <h:outputScript name="ecommerce/js/modernizr.js" />    
 <h:outputScript name="ecommerce/js/bootstrap-hover-dropdown.js" />    
 <h:outputScript name="ecommerce/js/owl.carousel.min.js" />    
-<h:outputScript name="ecommerce/js/front.js" /> 
-
-
-
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhod3cFLS-YpLC7HMQczdixy-8mHkbkOI"></script>
-
-    <script>
-        function initialize() {
-            var mapOptions = {
-                zoom: 15,
-                center: new google.maps.LatLng(25.81143,-108.9918581),
-                mapTypeId: google.maps.MapTypeId.ROAD,
-                scrollwheel: false
-            }
-            var map = new google.maps.Map(document.getElementById('map'),
-                mapOptions);
-
-            var myLatLng = new google.maps.LatLng(25.8114252, -108.9896694);
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map
-            });
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script> 
+<h:outputScript name="ecommerce/js/front.js" />  
 
 </h:body>
 

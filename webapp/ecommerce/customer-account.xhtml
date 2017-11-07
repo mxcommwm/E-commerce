@@ -363,101 +363,86 @@
             <div class="container">
 
                 <div class="col-md-12">
+
                     <ul class="breadcrumb">
                         <li><a href="#">Inicio</a>
                         </li>
-                        <li>Contacto</li>
+                        <li>Mi cuenta</li>
                     </ul>
 
                 </div>
 
                 <div class="col-md-3">
-                    <!-- *** PAGES MENU ***
+                    <!-- *** CUSTOMER MENU ***
  _________________________________________________________ -->
                     <div class="panel panel-default sidebar-menu">
 
                         <div class="panel-heading">
-                            <h3 class="panel-title">Página</h3>
+                            <h3 class="panel-title">Sección del cliente</h3>
                         </div>
 
                         <div class="panel-body">
+
                             <ul class="nav nav-pills nav-stacked">
                                 <li>
-                                    <a href="#">Facebook</a>
+                                    <a href="customer-orders.xhtml"><i class="fa fa-list"></i> Mis compras</a>
+                                </li>
+                                <li class="active">
+                                    <a href="customer-account.xhtml"><i class="fa fa-user"></i> Mi cuenta</a>
                                 </li>
                                 <li>
-                                    <a href="contact.xhtml">Whatsapp</a>
+                                    <a href="index.xhtml"><i class="fa fa-sign-out"></i> Cerrar sesión</a>
                                 </li>
-                                <li>
-                                    <a href="faq.xhtml">Twitter</a>
-                                </li>
-
                             </ul>
-
                         </div>
+
                     </div>
+                    <!-- /.col-md-3 -->
 
-                    <!-- *** PAGES MENU END *** -->
-
-
-                    <div class="banner">
-                        <a href="#">
-                            <h:graphicImage value="/resources/ecommerce/img/banner.png" alt="" class="img-responsive"/>
-                        </a>
-                    </div>
+                    <!-- *** CUSTOMER MENU END *** -->
                 </div>
 
                 <div class="col-md-9">
+                    <div class="box">
+                        <h1>Mi cuenta</h1>
+                        <p class="lead">Cambia tus datos personales o tu contraseña aquí.</p>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum velit nec arcu pharetra feugiat. </p>
 
+                        <h3>Cambiar contraseña</h3>
 
-                    <div class="box" id="contact">
-                        <h1>Contacto</h1>
+                        <h:form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="password_old">Contraseña anterior</label>
+                                        <input type="password" class="form-control" id="password_old"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="password_1">Nueva contraseña</label>
+                                        <input type="password" class="form-control" id="password_1"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="password_2">Confirmar contraseña nueva</label>
+                                        <input type="password" class="form-control" id="password_2"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.row -->
 
-                        <p class="lead">¿Tienes curiosidad por algo? ¿Tienes algún tipo de problema con nuestros productos?</p>
-                        <p>Por favor, siéntase libre de contactarnos, nuestro centro de servicio al cliente está trabajando para usted 24/7.</p>
+                            <div class="col-sm-12 text-center">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>Guardar nueva contraseña</button>
+                            </div>
+                        </h:form>
 
                         <hr></hr>
 
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-map-marker"></i> Dirección</h3>
-                                <p>Calle Fuente de Cristal
-                                    <br>Fraccionamiento Fuentes del Bosque</br>
-                                    <br>Código Postal 81229</br>
-                                    <br>Los Mochis, Sinaloa</br>                                    
-                                    <br></br>
-                                    <strong>México</strong>
-                                </p>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-phone"></i> Centro de llamadas</h3>
-                                <p class="text-muted">Este número es gratuito si llama desde Los Mochis, Sinaloa, de lo contrario, le recomendamos utilizar la forma electrónica de comunicación.</p>
-                                <p><strong>55 555 444 333</strong>
-                                </p>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                            <div class="col-sm-4">
-                                <h3><i class="fa fa-envelope"></i> Soporte electrónico</h3>
-                                <p class="text-muted">Por favor, siéntase libre de escribirnos un correo electrónico o utilizar nuestro sistema electrónico de venta de entradas.</p>
-                                <ul>
-                                    <li><strong><a href="mailto:">mwm@gmail.com</a></strong>
-                                    </li>                                    
-                                </ul>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                        </div>
-                        <!-- /.row -->
-
-                        <hr></hr>
-
-                        <div id="map">
-
-                        </div>
-
-                        <hr></hr>
-                        <h2>Formulario de contacto</h2>
-
+                        <h3>Detalles personales</h3>
                         <h:form>
                             <div class="row">
                                 <div class="col-sm-6">
@@ -472,46 +457,70 @@
                                         <input type="text" class="form-control" id="lastname"/>
                                     </div>
                                 </div>
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="company">Calle</label>
+                                        <input type="text" class="form-control" id="company"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="street">Número</label>
+                                        <input type="text" class="form-control" id="street"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="city">Colonia</label>
+                                        <input type="text" class="form-control" id="city"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="zip">Código postal</label>
+                                        <input type="text" class="form-control" id="zip"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="state">Estado</label>
+                                        <select class="form-control" id="state"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="phone">Teléfono</label>
+                                        <input type="text" class="form-control" id="phone"/>
+                                    </div>
+                                </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="email">Email</label>
                                         <input type="text" class="form-control" id="email"/>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="subject">Asunto</label>
-                                        <input type="text" class="form-control" id="subject"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="message">Mensaje</label>
-                                        <textarea id="message" class="form-control"></textarea>
-                                    </div>
-                                </div>
-
                                 <div class="col-sm-12 text-center">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Enviar mensaje</button>
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Guardar cambios</button>
 
                                 </div>
                             </div>
-                            <!-- /.row -->
                         </h:form>
-
-
                     </div>
-
-
                 </div>
-                <!-- /.col-md-9 -->
+
             </div>
             <!-- /.container -->
         </div>
         <!-- /#content -->
 
-
-       
 <!-- PIE DE PÁGINA-->
  <div class="box marcas">    
     <div class="row">
@@ -563,31 +572,6 @@
 <h:outputScript name="ecommerce/js/bootstrap-hover-dropdown.js" />    
 <h:outputScript name="ecommerce/js/owl.carousel.min.js" />    
 <h:outputScript name="ecommerce/js/front.js" /> 
-
-
-
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhod3cFLS-YpLC7HMQczdixy-8mHkbkOI"></script>
-
-    <script>
-        function initialize() {
-            var mapOptions = {
-                zoom: 15,
-                center: new google.maps.LatLng(25.81143,-108.9918581),
-                mapTypeId: google.maps.MapTypeId.ROAD,
-                scrollwheel: false
-            }
-            var map = new google.maps.Map(document.getElementById('map'),
-                mapOptions);
-
-            var myLatLng = new google.maps.LatLng(25.8114252, -108.9896694);
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map
-            });
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script> 
 
 </h:body>
 
