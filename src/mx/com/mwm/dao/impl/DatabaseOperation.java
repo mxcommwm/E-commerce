@@ -103,7 +103,7 @@ public class DatabaseOperation {
 		} catch(Exception sqlException) {
 			sqlException.printStackTrace();
 		}
-		return "/editStudent.xhtml?faces-redirect=true";
+		return "/ecommerce/editStudent.xhtml?faces-redirect=true";
 	}
 
 	public static String updateStudentDetailsInDB(StudentBean updateStudentObj) {
@@ -120,7 +120,7 @@ public class DatabaseOperation {
 		} catch(Exception sqlException) {
 			sqlException.printStackTrace();
 		}
-		return "/studentsList.xhtml?faces-redirect=true";
+		return "/ecommerce/studentsList.xhtml?faces-redirect=true";
 	}
 
 	public static String deleteStudentRecordInDB(int studentId){
@@ -132,6 +132,6 @@ public class DatabaseOperation {
 		} catch(Exception sqlException){
 			sqlException.printStackTrace();
 		}
-		return "/studentsList.xhtml?faces-redirect=true";
+		return "/ecommerce/studentsList.xhtml?faces-redirect=true";
 	}
 }

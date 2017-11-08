@@ -96,6 +96,11 @@
 			<version>5.2.12.Final</version>
 		</dependency>
 	<!-- Dependencia de hibernate,jpa, y h2 -->
+	<dependency>
+    <groupId>javax.enterprise</groupId>
+    <artifactId>cdi-api</artifactId>
+    <version>1.2</version>
+</dependency>
 
 	</dependencies>
 

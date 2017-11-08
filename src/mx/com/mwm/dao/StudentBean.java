@@ -5,8 +5,12 @@ import java.util.ArrayList;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+//import javax.faces.bean.RequestScoped;
+
 
 import mx.com.mwm.dao.impl.DatabaseOperation;
+
+
 
 @ManagedBean
 @RequestScoped
@@ -18,10 +22,7 @@ public class StudentBean {
 	private String password;
 	private String gender;
 	private String address;
-	private String coco;
 
-	//ESTE ES UN CAMBIO CON GIT
-	
 	public ArrayList studentsListFromDB;
 
 	public int getId() {
