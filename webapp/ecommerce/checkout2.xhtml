@@ -4,17 +4,13 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
-
-    
     <meta name="robots" content="all,follow"/>
     <meta name="googlebot" content="index,follow,snippet,archive"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="Obaju e-commerce template"/>
     <meta name="author" content="Ondrej Svestka | ondrejsvestka.cz"/>
     <meta name="keywords" content=""/>
-
     <title>MWM E-commerce</title>
-
     <meta name="keywords" content=""/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'/>
@@ -34,6 +30,7 @@
     <!-- your stylesheet with modifications -->
     <h:outputStylesheet name="ecommerce/css/custom.css" />
     <h:outputScript name="ecommerce/js/respond.min.js" />
+    <h:outputScript name="ecommerce/js/validacion.js" />
 
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
 		
@@ -388,31 +385,26 @@
                             </ul>
 
                             <div class="content">
-                                <div class="row">
+                                <div class="row" id="opciones">
                                     <div class="col-sm-6">
                                         <div class="box shipping-method">
-
-                                            <h4>Estafeta</h4>
-
-                                            <p>Retiro en sucursal de Estafeta</p>
-
+                                        <h4>Estafeta</h4>
                                             <div class="box-footer text-center">
-
-                                                <input type="radio" name="delivery" value="delivery1"/>
+                                            <h:selectOneRadio value="Estafeta" id="estafe" name="delivery1" >   	
+   												<f:selectItem itemValue="Estafeta"  itemLabel="Retiro en sucursal de Estafeta" />   												   												  												
+											</h:selectOneRadio>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="box shipping-method">
-
-                                            <h4>Envío a Domicilio</h4>
-
-                                            <p>Recibe tu pedido en tu domicilio</p>
-
+                                            <h4>Envío a Domicilio</h4>                                          
                                             <div class="box-footer text-center">
-
-                                                <input type="radio" name="delivery" value="delivery2"/>
+											<h:selectOneRadio value="Domicilio" id="domicilio" name="delivery1">   	
+   												<f:selectItem itemValue="Estafeta" itemLabel="Recibe tu pedido en tu domicilio" />
+											</h:selectOneRadio>                                                
                                             </div>
+                                            
                                         </div>
                                     </div>                                   
                                 </div>

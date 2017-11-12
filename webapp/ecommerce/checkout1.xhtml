@@ -2,25 +2,18 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:h="http://java.sun.com/jsf/html" 
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
-
-
-<h:head>
-    
+<h:head>    
     <meta name="robots" content="all,follow"/>
     <meta name="googlebot" content="index,follow,snippet,archive"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="Obaju e-commerce template"/>
     <meta name="author" content="Ondrej Svestka | ondrejsvestka.cz"/>
     <meta name="keywords" content=""/>
-
     <title>MWM E-commerce</title>
-
     <meta name="keywords" content=""/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'/>
-
     <!-- Estilos -->
-    
     <h:outputStylesheet name="ecommerce/css/bootstrap.min.css" />
     <h:outputStylesheet name="ecommerce/css/font-awesome.css" />
     <h:outputStylesheet name="ecommerce/css/font-awesome.min.css" />
@@ -32,20 +25,15 @@
     <h:outputStylesheet name="ecommerce/css/style.blue.css" id="theme-stylesheet"/>  
 
     <!-- your stylesheet with modifications -->
+    
+    <h:outputScript name="ecommerce/js/jquery.min.js" />
     <h:outputStylesheet name="ecommerce/css/custom.css" />
     <h:outputScript name="ecommerce/js/respond.min.js" />
-
+    <h:outputScript name="ecommerce/js/validacion.js" />
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
-		
-
-
-
 </h:head>
-
 <h:body>
-
-    <!-- *** TOPBAR ***
- _________________________________________________________ -->
+    <!-- *** TOPBAR ***-->
     <div id="top">
         <div class="container">
             <div class="col-md-12" data-animate="fadeInDown">
@@ -373,11 +361,11 @@
                 <div class="col-md-9" id="checkout">
 
                     <div class="box">
-                        <h:form method="post" action="checkout2.xhtml">
+                        <h:form method="post" action="checkout2.xhtml" id="formReg">
                             <h1>Datos de envío</h1>
                             <ul class="nav nav-pills nav-justified">
                                 <li class="active"><a href="#"><i class="fa fa-map-marker"></i><br></br>Dirección</a>
-                                </li>
+                                </li>                                
                                 <li class="disabled"><a href="#"><i class="fa fa-truck"></i><br></br>Método de entrega</a>
                                 </li>
                                 <li class="disabled"><a href="#"><i class="fa fa-money"></i><br></br>Método de pago</a>
@@ -391,13 +379,13 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="firstname">Nombre(s)</label>
-                                            <input type="text" class="form-control" id="firstname"/>
+                                            <h:inputText class="form-control" id="nombre"/>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="lastname">Apellidos</label>
-                                            <input type="text" class="form-control" id="lastname"/>
+                                            <h:inputText class="form-control" id="apellidos"/>                                            
                                         </div>
                                     </div>
                                 </div>
@@ -407,13 +395,13 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="company">Empresa</label>
-                                            <input type="text" class="form-control" id="company"/>
+                                            <h:inputText class="form-control" id="empresa"/>                                            
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="street">Calle</label>
-                                            <input type="text" class="form-control" id="street"/>
+                                            <h:inputText class="form-control" id="calle"/>                                            
                                         </div>
                                     </div>
                                 </div>
@@ -423,31 +411,31 @@
                                     <div class="col-sm-6 col-md-3">
                                         <div class="form-group">
                                             <label for="city">Colonia</label>
-                                            <input type="text" class="form-control" id="city"/>
+                                            <h:inputText class="form-control" id="colonia"/>                                            
                                         </div>
                                     </div>
                                     <div class="col-sm-6 col-md-3">
                                         <div class="form-group">
                                             <label for="zip">Código Postal</label>
-                                            <input type="text" class="form-control" id="zip"/>
+                                            <h:inputText class="form-control" id="cp"/>                                            
                                         </div>
                                     </div>
                                     <div class="col-sm-6 col-md-3">
                                         <div class="form-group">
                                             <label for="state">Estado</label>
-                                            <select class="form-control" id="state"></select>
+                                            <h:inputText class="form-control" id="estado"/>                                            
                                         </div>
                                     </div>                                    
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="phone">Teléfono</label>
-                                            <input type="text" class="form-control" id="phone"/>
+                                            <h:inputText class="form-control" id="telefono"/>                                            
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="email">Email</label>
-                                            <input type="text" class="form-control" id="email"/>
+                                            <h:inputText type="email" class="form-control" id="email"/>                                            
                                         </div>
                                     </div>
 
@@ -458,12 +446,15 @@
                             <div class="box-footer">
                                 <div class="pull-left">
                                     <a href="basket.xhtml" class="btn btn-default"><i class="fa fa-chevron-left"></i>Volver al carrito</a>
+                                    <h:commandButton value="Volver al carrito" type="submit" action="basket.xhtml" class="btn btn-default  fa fa-chevron-left "/>
                                 </div>                               
-                                <div class="pull-right">
-                                     <a href="checkout2.xhtml" class="btn btn-primary" type="submit">Elegir método de entrega<i class="fa fa-chevron-right"></i></a>
+                                <div class="pull-right">                                     
+                                     <h:commandButton value="Elegir método de entrega " type="submit" action="checkout2.xhtml" class="btn btn-primary  fa fa-chevron-right "/>   
                                 </div>
                             </div>
                         </h:form>
+                        
+                        
                     </div>
                     <!-- /.box -->
 
