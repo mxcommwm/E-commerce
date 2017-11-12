@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Rol implements Serializable{
 
 	/**
-	 * 
+	 * @author Jorge
 	 */
 	private static final long serialVersionUID = 1L;
 	
